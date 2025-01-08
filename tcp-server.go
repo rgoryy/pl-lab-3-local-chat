@@ -57,9 +57,8 @@ func handleMessages(client *Client) {
     firstPart := splited[0]
 
     if strings.HasPrefix(firstPart, "@") {
-      fmt.Printf(firstPart + " <- челу")
       if clientToSend, ok := clients[firstPart]; ok {
-        fmt.Println(firstPart + " <- челу")
+        msg = splited[1]
         clientToSend.conn.Write([]byte(fmt.Sprintf("%s: %s\n", client.nick, msg)))
       }
     } else {

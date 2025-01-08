@@ -48,7 +48,6 @@ func main() {
       break
     }
 
-    // Отправка сообщения
     sendMessage(conn, msg)
   }
 
@@ -72,6 +71,6 @@ func receiveMessage(conn net.Conn, wg *sync.WaitGroup) {
       fmt.Println("Error reading message from server:", err)
       return
     }
-    fmt.Println("Received message:", message)
+    fmt.Println(message)
   }
 }
