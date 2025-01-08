@@ -2,8 +2,8 @@
 
 ## Сервер
 Запустите сервер с помощью команды:
-go run tcp-server.go
+**go run tcp-server.go**
 
 ## Клиент  
 Запустите клиент с помощью команды:
-go run tcp-client.go
+**go run tcp-client.go**
