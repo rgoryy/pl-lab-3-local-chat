@@ -19,6 +19,7 @@ func main() {
         fmt.Println("Starting client...")
         cmd := exec.Command("go", "run", "tcp-client.go")
         cmd.Stdout = os.Stdout
+        cmd.Stdin = os.Stdin
         cmd.Stderr = os.Stderr
         err := cmd.Run()
         if err != nil {
